@@ -48,13 +48,13 @@ document.getElementById('test-button').addEventListener('click', function(){
     console.log('activeArticle:', activeArticle);
     targetArticle.classList.add('active');
 
-  }
+  };
 
 
 
   const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles';
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
 
   function generateTitleLinks(){
 
@@ -70,24 +70,24 @@ document.getElementById('test-button').addEventListener('click', function(){
 
     for(let article of articles){
 
-    /* get the article id */
+      /* get the article id */
 
       const articleId = article.getAttribute('id');
 
-    /* find the title element */
+      /* find the title element */
 
       const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
-    /* get the title from the title element */
+      /* get the title from the title element */
 
       const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
 
 
-    /* create HTML of the link */
+      /* create HTML of the link */
 
       titleList.innerHTML = titleList.innerHTML + linkHTML;
 
-    /* insert link into titleList */
+      /* insert link into titleList */
 
       html = html + linkHTML;
       console.log(html);
