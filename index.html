@@ -179,35 +179,30 @@
           </section>
           <aside class="sidebar">
             <h2 class="section-title">Tags</h2>
-            <ul class="list tags">
+            <ul class="list tags list-horizontal">
             </ul>
             <h2 class="section-title">Authors</h2>
             <ul class="list authors">
-              <li>
-                <a href="#">
-                  <span class="author-name">Kitty Toebean</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">Theo Tabby</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">George Tuxedo</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="author-name">Marion Berry</span>
-                </a>
-              </li>
             </ul>
           </aside>
         </main>
       </div>
     </div>
+    <script id="template-article-link" type="text/x-handlebars-template">
+      <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+    </script>
+    <script id="template-tag-link" type="text/x-handlebars-template">
+      <li><a href="#{{ tag }}">{{ tag }}</a></li>
+    </script>
+    <script id="template-author-link" type="text/x-handlebars-template">
+      <a href="#{{ author }}">{{ author }}</a>
+    </script>
+    <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+      {{#each tags}}
+      <li>{{ tag }}</li>
+      {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
